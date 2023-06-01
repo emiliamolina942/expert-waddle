@@ -9,7 +9,12 @@ const app = new Application({
 	height: 480
 });
 
+//Loader.shared.add({url:"./pngegg.png", name:"myegg"});
+
 const clampy: Sprite = Sprite.from("./clampy.png");
+//const clampy: Sprite = Sprite.from("myegg");
+
+//console.log("Hola chiquis");
 
 clampy.anchor.set(0.5);
 
