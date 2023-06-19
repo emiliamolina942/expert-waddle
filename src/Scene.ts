@@ -1,4 +1,4 @@
-import { AnimatedSprite, Container, Graphics, Text, Texture } from "pixi.js";
+import { AnimatedSprite, Container, Graphics, NineSlicePlane, Text, Texture } from "pixi.js";
 import { SnoopyHat } from "./SnoopyHat";
 
 
@@ -69,7 +69,17 @@ export class Scene extends Container {
         
          this.addChild(myText);
 
-         //Nine-Slice Plane     
+         //Nine-Slice Plane  
+         const panel = new NineSlicePlane(
+            Texture.from("panel"),
+            35,35,35,35
+         );
+         this.addChild(panel);   
+         panel.width=350;
+         panel.height=300;
+         panel.scale.set(3);
+         panel.position.x=100;
+         panel.position.y=100;
 
 
         
