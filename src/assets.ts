@@ -9,6 +9,11 @@ export const assets = {
     SnoopyRun5:"./Snoop/run5.png",
     SnoopyRun6:"./Snoop/run6.png",
 
-    panel:"./ui/fondo.png"
+    panel:"./ui/fondo.png", 
+
+    taskpanel:"./ui/recuadro1.png",
+    estrella:"./ui/boton3.png",
+    //box:":/ui/recuadro2.png"
+   
 
 };

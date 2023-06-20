@@ -14,7 +14,8 @@ export class SnoopyHat extends Container{
         Hat.angle = -25
 
         this.addChild(Snoopy);
-        this.addChild(Hat);
+        this.addChild(Hat);            
+
         
     }
 

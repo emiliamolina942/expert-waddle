@@ -37,52 +37,53 @@ export class Scene extends Container {
         //Graficos
         const myGraph : Graphics = new Graphics();
 
-            myGraph.lineStyle ({color: 0xff00ff, width :20, alpha:1});
-            myGraph.moveTo(0,0);
-            myGraph.lineTo(400,350);
-            myGraph.lineTo(400, 600);
-            myGraph.lineTo(240,600)
-            myGraph.lineTo(0,0)
+        myGraph.lineStyle ({color: 0xff00ff, width :20, alpha:1});
+        myGraph.moveTo(0,0);
+        myGraph.lineTo(400,350);
+        myGraph.lineTo(400, 600);
+        myGraph.lineTo(240,600)
+        myGraph.lineTo(0,0)
 
-            myGraph.position.set(1280/2,1500/2);
+        myGraph.position.set(1280/2,1500/2);
 
-            myGraph.clear();
+        myGraph.clear();
 
-            myGraph.lineStyle({color:0xff00ff, width:10, alpha:1});
-            myGraph.beginFill(0x00ff00, 1);
-            myGraph.drawCircle(0,0,100);
+        myGraph.lineStyle({color:0xff00ff, width:10, alpha:1});
+        myGraph.beginFill(0x00ff00, 1);
+        myGraph.drawCircle(0,0,100);
 
-            myGraph.endFill();
-            myGraph.drawCircle(50,50,100);
+        myGraph.endFill();
+        myGraph.drawCircle(50,50,100);
 
-            myGraph.position.set(1280/2,1500/2);
-            this.addChild(myGraph);
+        myGraph.position.set(0,1300);
+        this.addChild(myGraph);
 
-         //Texto
-         const myText : Text = new Text ("Holis", {fontSize:150,fill:0xff0000, fontFamily:"comic sans MS"});
-         myText.text = "Snoopy";
-         myText.position.x =700;
-         myText.position.y =0;
+        //Texto
+        const myText : Text = new Text ("Holis", {fontSize:50,fill:0xff0000, fontFamily:"comic sans MS"});
+        myText.text = "Snoopy";
+        myText.position.x =1280/2;
+        myText.position.y =0;
 
-         myText.angle=45;
-         myText.scale.set(2);
+        myText.angle=0;
+        myText.scale.set(2);
         
-         this.addChild(myText);
+        this.addChild(myText);
 
-         //Nine-Slice Plane  
-         const panel = new NineSlicePlane(
-            Texture.from("panel"),
-            35,35,35,35
-         );
-         this.addChild(panel);   
-         panel.width=350;
-         panel.height=300;
-         panel.scale.set(3);
-         panel.position.x=100;
-         panel.position.y=100;
-
+        //Nine-Slice Plane  
+        const panel = new NineSlicePlane(
+           Texture.from("panel"),
+           35,35,35,35
+        );
+        //this.addChild(panel);   
+        panel.width=350;
+        panel.height=300;
+        panel.scale.set(3);
+        panel.position.x=100;
+        panel.position.y=100;        
 
         
+
+           
         
         
 
