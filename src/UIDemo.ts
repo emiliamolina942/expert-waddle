@@ -17,24 +17,29 @@ export class UIDemo extends Container{
         taskpanel.scale.set(2);
 
         //Texto
-        const taskText : Text = new Text ("Holis", {fontSize:50,fill:0xff0000});
-        taskText.text = "COMPLETE";
-        taskText.position.x =400;
-        taskText.position.y =200;
- 
-        taskText.scale.set(2);
+        const taskText : Text = new Text ("Waiting...", {fontSize:50,fill:0x8EED80});
+        //taskText.text = "COMPLETE";
+        taskText.position.x =600;
+        taskText.position.y =900;
+         
+        taskText.scale.set(1);
          
         this.addChild(taskText);
 
-        const estrella: Sprite= Sprite.from("estrella");
-        estrella.position.set (350,250);
-        estrella.scale.set(0.1);
-        this.addChild(estrella);
+        const star: Sprite= Sprite.from("star");
+        star.position.set (300,400);
+        star.scale.set(0.1);
+        this.addChild(star);
 
-        const estrella2: Sprite= Sprite.from("estrella");
-        estrella2.position.set (1375,250);
-        estrella2.scale.set(0.1);
-        this.addChild(estrella2);    
+        const play: Sprite= Sprite.from("play");
+        play.position.set (600,400);
+        play.scale.set(0.1);
+        this.addChild(play);    
+
+        const okey : Sprite = Sprite.from("okey");
+        okey.position.set(450,650);
+        okey.scale.set(0.1);
+        this.addChild(okey);
         
     }      
 

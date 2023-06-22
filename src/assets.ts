@@ -12,8 +12,9 @@ export const assets = {
     panel:"./ui/fondo.png", 
 
     taskpanel:"./ui/recuadro1.png",
-    estrella:"./ui/boton3.png",
-    //box:":/ui/recuadro2.png"
+    star:"./ui/botonstar.png",
+    play:"./ui/botonplay.png",
+    okey:"./ui/botonok.png",
    
 
 };
