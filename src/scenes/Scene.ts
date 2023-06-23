@@ -1,5 +1,5 @@
 import { AnimatedSprite, Container, Graphics, NineSlicePlane, Text, Texture } from "pixi.js";
-import { SnoopyHat } from "./SnoopyHat";
+import { SnoopyHat } from "../game/SnoopyHat";
 
 
 export class Scene extends Container {

@@ -1,7 +1,7 @@
 import { Application, Assets} from 'pixi.js'
 import { assets } from './assets';
 //import { Scene } from './Scene';
-import { UIDemo } from './UIDemo'
+import { UIDemo } from './scenes/UIDemo';
 
 const app = new Application({
 	view: document.getElementById("pixi-canvas") as HTMLCanvasElement,
