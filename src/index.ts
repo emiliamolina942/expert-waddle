@@ -2,6 +2,10 @@ import { Application, Assets} from 'pixi.js'
 import { assets } from './assets';
 //import { Scene } from './Scene';
 import { UIDemo } from './scenes/UIDemo';
+import { Keyboard } from './utils/Keyboard';
+
+
+
 
 const app = new Application({
 	view: document.getElementById("pixi-canvas") as HTMLCanvasElement,
@@ -11,6 +15,8 @@ const app = new Application({
 	width: 1280,
 	height: 1500
 });
+
+Keyboard.initialize();
 
 //(globalThis as any).__PIXI_APP__ = app;
 

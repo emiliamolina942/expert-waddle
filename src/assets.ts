@@ -15,6 +15,8 @@ export const assets = {
     star:"./ui/botonstar.png",
     play:"./ui/botonplay.png",
     okey:"./ui/botonok.png",
+    buttonstardown:"./ui/botonstardown.png",
+    buttonstarover:"./ui/botonstarover.png"
    
 
 };
