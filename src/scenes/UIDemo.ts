@@ -20,8 +20,7 @@ export class UIDemo extends Container{
 
         const background = Sprite.from("taskpanel");
         dialog.addChild(background);
-        //this.addChild(background);
-                
+                        
         //Boton Estrella (imita al Mouse)       
         this.buttonStar = new Button(Texture.from("star"),
             Texture.from("buttonstardown"),
@@ -33,7 +32,11 @@ export class UIDemo extends Container{
         this.buttonStar.y = (this.buttonStar.height+200);
                 
         dialog.addChild(this.buttonStar); 
-        //this.addChild(this.buttonStar);
+
+        
+        //(globalThis as any).__PIXI_APP__ = app;
+
+                
 
         //Boton Play (imita al button touch)
         const buttonPlay: Sprite= Sprite.from("play");        
@@ -41,21 +44,26 @@ export class UIDemo extends Container{
         buttonPlay.x=(background.width/2)+(this.buttonStar.width*0.6);
         buttonPlay.y=this.buttonStar.height+200;
         buttonPlay.interactive = true;
+        buttonPlay.on("touchstart", this.onTouchStart, this);
+        //buttonPlay.on("touchend", this.onTouchEnd, this);
         dialog.addChild(buttonPlay); 
-        //this.addChild(buttonPlay);  
+          
 
         //Boton ok (imita al boton mouse + boton touch)
         const buttonOkey : Sprite = Sprite.from("okey");
-        //buttonOkey.scale.set(0.1);
+       
         buttonOkey.anchor.set(0.5);
         buttonOkey.x=(background.width/2);
         buttonOkey.y= this.buttonStar.height+500;
         buttonOkey.interactive = true;
+        buttonOkey.on("pointerup", this.onPointerUp, this);
+        //buttonOkey.on("pointerdown", this.onPointerDown, this);
+        
         dialog.addChild(buttonOkey);
-        //this.addChild(buttonOkey);
+        
 
         //Texto
-        this.lastKeyPressed = new Text ("Waiting...", {fontSize:40,fill:0x8EED80});
+        this.lastKeyPressed = new Text ("Select", {fontSize:40,fill:0x8EED80});
         //lastkeypressed.text = "COMPLETE";
         this.lastKeyPressed.scale.set(2);
         this.lastKeyPressed.position.x =background.width/2 -100;
@@ -66,20 +74,37 @@ export class UIDemo extends Container{
 
         this.addChild(dialog);  
 
-        //Keyboard.down.on("keyB", this.onKeyB, this);         
+        Keyboard.down.on("KeyB", this.onKeyB, this);
+        Keyboard.up.on("KeyB", this.onKeyUp, this );              
 
        
     }    
 
-    //private onKeyB(): void{
-    //    console.log("aprete la B", this);
-    //}
-
-  
+    
     //Función click
     private onButtonClick():void{
-        console.log("my new button clicked", Keyboard.state.get("keyA"));
+        console.log("you clicked the star ^^ ", Keyboard.state.get("KeyA"));
     }
+
+    private onKeyB(){
+        console.log("aprete la B", this);
+    }
+
+    private onKeyUp(): void{
+        console.log("solté la B", this);
+    }
+
+    //Botón Play
+    private onTouchStart():void{
+        console.log("you clicked the play button");
+    }
+
+      //Botón Okey
+    private onPointerUp():void{
+        console.log("you clicked the ok button");
+    }
+
+
     
    
  

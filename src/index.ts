@@ -18,7 +18,7 @@ const app = new Application({
 
 Keyboard.initialize();
 
-//(globalThis as any).__PIXI_APP__ = app;
+
 
 window.addEventListener("resize", ()=>{
 	const scaleX = window.innerWidth / app.screen.width;

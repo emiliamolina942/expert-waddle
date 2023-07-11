@@ -40,8 +40,7 @@ export class Button extends Container{
     }
 
     private onMouseUp(): void { 
-        this.callback();
-        //console.log("Apreté el botón");
+        this.callback();        
         this.spr.texture = this.over;
     }
 
